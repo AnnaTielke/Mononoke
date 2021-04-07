@@ -41,7 +41,22 @@ Definition of the different states and their transition (transition functions)
 
 ## Task
 
-Task definition in order of priority
+- main - buildDom
+- main - buildStartScreen
+- main - buildGameScreen
+- main - buildGameOverScreen
+- main - addEventListener
+
+- game - startLoop
+- game - drawCanvas
+- harrypotter - draw
+- harrypotter - move
+- harrypotter - shoot
+- deathEaters - draw
+- deathEaters - move
+- game - keepScore
+- game - endGame
+- game - addEventListener
 
 ## Additional Links
 
@@ -51,4 +66,4 @@ https://github.com/AnnaTielke/Mononoke/projects/1
 
 ### Slides
 
-tba on weekend
+tba 

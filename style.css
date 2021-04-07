@@ -1,0 +1,51 @@
+.body {
+  background-color: #141f0d;
+}
+
+.splash-screen {
+  margin-top: 120px;
+  color: rgb(17, 167, 167);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+}
+
+h1 {
+  font-size: 80px;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+.div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#start {
+  width: 200px;
+  min-height: 50px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 25px;
+  color: rgb(190, 190, 199);
+  background-color: mediumpurple;
+  margin-top: 50px;
+}
+#restart {
+  width: 200px;
+  min-height: 50px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 25px;
+  color: rgb(190, 190, 199);
+  background-color: mediumpurple;
+  margin-top: 50px;
+}
+
+#myCanvas {
+  margin-top: 100px;
+}
