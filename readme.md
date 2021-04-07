@@ -1,11 +1,10 @@
-# :deciduous_tree: :deciduous_tree: SAFE THE FOREST :deciduous_tree: :deciduous_tree:
+# :deciduous_tree: :deciduous_tree: SAVE THE FOREST :deciduous_tree: :deciduous_tree:
 
 [Link Deploy](http://github.com)
 
 ## Description
 
-in Safe the forest the player has to let princess Mononoke jump over the
-attacking humans that appear from the right of the screen.
+in Save the Forest the player has to let princess Mononoke jump over the attacking humans that appear from the right of the screen.
 Catching the "Kodama" will update the score. Catching 10 will let you win the game.
 
 ## MVP
@@ -20,14 +19,14 @@ Catching the "Kodama" will update the score. Catching 10 will let you win the ga
 
 ## Backlog
 
+- Lives: start with 3 lives, lose one when hitting a human, the "Forest Spirit" appears, can udpate your lives again
 - humans can also be destroyed by shooting an arrow at them
 - the endboss "Toar" appears from the right, can be destroyed by shoting 5 arrows
 - music start, stop
-- Lives: start with 3 lives, lose one when hitting a human, the "Forest Spirit" appears, can udpate your lives again
+
 
 ## Data structure
 
-tba on weekend
 Classes and methods definition. Or functions.
 
 ## States y States Transitions
@@ -41,22 +40,7 @@ Definition of the different states and their transition (transition functions)
 
 ## Task
 
-- main - buildDom
-- main - buildStartScreen
-- main - buildGameScreen
-- main - buildGameOverScreen
-- main - addEventListener
 
-- game - startLoop
-- game - drawCanvas
-- harrypotter - draw
-- harrypotter - move
-- harrypotter - shoot
-- deathEaters - draw
-- deathEaters - move
-- game - keepScore
-- game - endGame
-- game - addEventListener
 
 ## Additional Links
 

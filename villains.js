@@ -73,3 +73,9 @@ function drawSpirits() {
     }
   }
 }
+
+function scoringDisplay() {
+  ctx.fillStyle = "#ffffff";
+  ctx.font = "25px Verdana, Arial";
+   ctx.fillText(`SCORE: ${score}`, 50, canvas.height - 550);
+}

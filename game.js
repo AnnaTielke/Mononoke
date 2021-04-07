@@ -6,7 +6,6 @@ let restartBtn = document.querySelector("#restart");
 let splashScreen = document.querySelector("#splash");
 let GOScreen = document.querySelector("#gameOver");
 
-
 let isGameOver = false;
 let intervalId = 0;
 let isArrowUp = false,
@@ -61,6 +60,7 @@ function draw() {
   animate();
   drawVillains();
   drawSpirits();
+  scoringDisplay();
 
   if (isGameOver) {
     cancelAnimationFrame(intervalId);
@@ -68,7 +68,6 @@ function draw() {
     restartBtn.style.display = "block";
     audio.pause();
     GOScreen.style.display = "block";
-    
   } else {
     intervalId = requestAnimationFrame(draw);
   }
@@ -133,7 +132,7 @@ window.addEventListener("load", () => {
     // do something when the user clicks the restart button
     restart();
     GOScreen.style.display = "none";
-    audio.currentTime=0
+    audio.currentTime = 0;
     audio.play();
   });
 });
