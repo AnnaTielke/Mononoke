@@ -40,16 +40,18 @@ let spirCoord = [
   { img: spir3, x: canvas.width + 1200, y: 250 },
   { img: spir5, x: canvas.width + 1500, y: 130 },
   { img: spir4, x: canvas.width + 1800, y: 200 },
-  { img: spir6, x: canvas.width + 2100, y: 300 }
+  { img: spir6, x: canvas.width + 2100, y: 300 },
 ];
 
 let score = 0;
+
+
 
 function drawSpirits() {
   for (let i = 0; i < spirImg.length; i++) {
     ctx.drawImage(spirCoord[i].img, spirCoord[i].x, spirCoord[i].y);
 
-    spirCoord[i].x = spirCoord[i].x - 4;
+    spirCoord[i].x = spirCoord[i].x -4;
 
     if (spirCoord[i].x + spirImg[i].width < 0) {
       spirCoord[i] = {

@@ -5,9 +5,11 @@ let startBtn = document.querySelector("#start");
 let restartBtn = document.querySelector("#restart");
 let splashScreen = document.querySelector("#splash");
 let GOScreen = document.querySelector("#gameOver");
+let winScreen = document.querySelector("#win");
 let ScoreDisplay = document.querySelector("#score");
-
+let ScoreWinDisplay = document.querySelector("#scoreWin");
 let isGameOver = false;
+let hasWon = false;
 let intervalId = 0;
 let isArrowUp = false,
   isArrowDown = false;
@@ -61,9 +63,10 @@ let sanX = 10,
   roadY = 380;
 
 function draw() {
-  canvas.style.display = "block";
   startBtn.style.display = "none";
-  splashScreen.style.display = "none";
+  // splashScreen.style.display = "none";
+  //winScreen.style.display = "none";
+  //GOScreen.style.display = "none";
   ctx.drawImage(bg, 0, 0);
   ctx.drawImage(road, roadX, roadY);
   ctx.drawImage(san, sanX, sanY, sanW, sanH);
@@ -72,10 +75,26 @@ function draw() {
   drawSpirits();
   scoringDisplay();
 
-  if (isGameOver) {
+  if (score == 2) {
+    hasWon = true;
+  }
+
+  if (hasWon) {
     cancelAnimationFrame(intervalId);
     canvas.style.display = "none";
+    startBtn.style.display = "none";
     restartBtn.style.display = "block";
+    audio.pause();
+    GOScreen.style.display = "none";
+    winScreen.style.display = "block";
+    ScoreWinDisplay.innerHTML = `YOUR SCORE:${score}`;
+  } else if (isGameOver) {
+    cancelAnimationFrame(intervalId);
+    canvas.style.display = "none";
+    splashScreen.style.display = "none";
+    winScreen.style.display = "none";
+    restartBtn.style.display = "block";
+    startBtn.style.display = "none";
     audio.pause();
     GOScreen.style.display = "block";
     ScoreDisplay.innerHTML = `YOUR SCORE:${score}`;
@@ -128,12 +147,15 @@ function animate() {
 window.addEventListener("load", () => {
   canvas.style.display = "none";
   GOScreen.style.display = "none";
+  winScreen.style.display = "none";
   restartBtn.style.display = "none";
 
   startBtn.addEventListener("click", () => {
     // click on start: Canvas appears, startbtn gone
     //start();{}
     draw();
+    splashScreen.style.display = "none";
+    canvas.style.display = "block";
     audio.play();
     //ctx.drawImage(san, 10, 300, 250, 150);
   });
@@ -142,6 +164,9 @@ window.addEventListener("load", () => {
     // do something when the user clicks the restart button
     restart();
     GOScreen.style.display = "none";
+    canvas.style.display = "block";
+    winScreen.style.display = "none";
+    splashScreen.style.display = "none";
     audio.currentTime = 0;
     audio.play();
   });
@@ -149,6 +174,8 @@ window.addEventListener("load", () => {
 
 function restart() {
   isGameOver = false;
+  hasWon = false;
+  score = 0;
   (sanX = 10), (sanY = 300);
   vilCoord = [
     { img: vil1, x: canvas.width, y: 280 },
