@@ -87,7 +87,7 @@ function draw() {
     audio.pause();
     GOScreen.style.display = "none";
     winScreen.style.display = "block";
-    ScoreWinDisplay.innerHTML = `YOUR SCORE:${score}`;
+    ScoreWinDisplay.innerHTML = `YOUR SCORE: ${score}`;
   } else if (isGameOver) {
     cancelAnimationFrame(intervalId);
     canvas.style.display = "none";
@@ -97,7 +97,7 @@ function draw() {
     startBtn.style.display = "none";
     audio.pause();
     GOScreen.style.display = "block";
-    ScoreDisplay.innerHTML = `YOUR SCORE:${score}`;
+    ScoreDisplay.innerHTML = `YOUR SCORE: ${score}`;
   } else {
     intervalId = requestAnimationFrame(draw);
   }
