@@ -75,7 +75,7 @@ function draw() {
   drawSpirits();
   scoringDisplay();
 
-  if (score == 2) {
+  if (score == 7) {
     hasWon = true;
   }
 
