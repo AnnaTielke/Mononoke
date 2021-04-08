@@ -33,11 +33,14 @@ function drawVillains() {
   }
 }
 // forest spirits
-let spirImg = [spir1, spir2, spir3];
+let spirImg = [spir1, spir2, spir3, spir5, spir4, spir6];
 let spirCoord = [
   { img: spir1, x: canvas.width, y: 80 },
   { img: spir2, x: canvas.width + 800, y: 170 },
-  { img: spir3, x: canvas.width + 200, y: 250 },
+  { img: spir3, x: canvas.width + 1200, y: 250 },
+  { img: spir5, x: canvas.width + 1500, y: 130 },
+  { img: spir4, x: canvas.width + 1800, y: 200 },
+  { img: spir6, x: canvas.width + 2100, y: 300 }
 ];
 
 let score = 0;
@@ -77,5 +80,5 @@ function drawSpirits() {
 function scoringDisplay() {
   ctx.fillStyle = "#ffffff";
   ctx.font = "25px Verdana, Arial";
-   ctx.fillText(`SCORE: ${score}`, 50, canvas.height - 550);
+  ctx.fillText(`SCORE: ${score}`, 50, canvas.height - 550);
 }

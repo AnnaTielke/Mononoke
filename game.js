@@ -5,6 +5,7 @@ let startBtn = document.querySelector("#start");
 let restartBtn = document.querySelector("#restart");
 let splashScreen = document.querySelector("#splash");
 let GOScreen = document.querySelector("#gameOver");
+let ScoreDisplay = document.querySelector("#score");
 
 let isGameOver = false;
 let intervalId = 0;
@@ -33,6 +34,15 @@ spir2.src = "./img/spirit2.png";
 
 let spir3 = new Image();
 spir3.src = "./img/spirit3.png";
+
+let spir4 = new Image();
+spir4.src = "./img/spirit_4.png";
+
+let spir5 = new Image();
+spir5.src = "./img/spirit_5.png";
+
+let spir6 = new Image();
+spir6.src = "./img/spirit_6.png";
 //Villians:
 let vil1 = new Image();
 vil1.src = "./img/villain1.png";
@@ -68,6 +78,7 @@ function draw() {
     restartBtn.style.display = "block";
     audio.pause();
     GOScreen.style.display = "block";
+    ScoreDisplay.innerHTML = `YOUR SCORE:${score}`;
   } else {
     intervalId = requestAnimationFrame(draw);
   }
@@ -115,7 +126,6 @@ function animate() {
 
 // START
 window.addEventListener("load", () => {
-  //with none both is hidden
   canvas.style.display = "none";
   GOScreen.style.display = "none";
   restartBtn.style.display = "none";
@@ -149,6 +159,9 @@ function restart() {
     { img: spir1, x: canvas.width, y: 80 },
     { img: spir2, x: canvas.width + 800, y: 170 },
     { img: spir3, x: canvas.width + 200, y: 250 },
+    { img: spir5, x: canvas.width + 1500, y: 130 },
+    { img: spir4, x: canvas.width + 1800, y: 200 },
+    { img: spir6, x: canvas.width + 2100, y: 300 },
   ];
   restartBtn.style.display = "none";
   draw();
