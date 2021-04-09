@@ -17,6 +17,7 @@ let isSpaceDown = false;
 
 //audio
 let audio = new Audio("./img/Mystery Forest.mp3");
+audio.volume = 0.1;
 
 //images
 let bg = new Image();
