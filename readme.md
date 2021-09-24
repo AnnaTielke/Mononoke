@@ -50,4 +50,4 @@ https://github.com/AnnaTielke/Mononoke/projects/1
 
 ### Slides
 
-[link]()
+[link](https://docs.google.com/presentation/d/16OHrlYTid2AUbTBJNXLyVrSzojrp1iInX2LW9RqBk1o/edit?usp=drivesdk)
